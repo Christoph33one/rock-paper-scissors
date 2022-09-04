@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5605f6cfce.js" crossorigin="anonymous"></script>
+    <link rel='shortcut icon' type='image/x-icon' href='assets/images/logo.png' />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Rock Paper Scissors </title>
+</head>
+<body>
+
+    <div id=" controls-area">
+    <button id="startBnt" class="start-bnt">Start Game</button>
+    <button id="rules-bnt" class="hide">Game Rules</button>
+    </div>
+
+    <div id="gameArea" class="hide">
+        <h1 class="gameText" id="playerText">Player: </h1>
+        <h1 class="gameText" id="computerText">Computer: </h1>
+        <h1 class="gameText" id="resultText">Score: </h1>
+
+        <button class="choiceBnt" id="playerText">ROCK</button>
+        <button class="choiceBnt" id="playerText">PAPER</button>
+        <button class="choiceBnt" id="playerText">SCISSORS</button>
+    </div>
+
+    <div id="gameScore" class="score-area" class="hide">
+        <p class="scores">Players Score<span id="score">0</span></p>
+        <p class="scores">Computers Score<span id="incorrect">0</span></p>
+    </div>
+</body>
+
+<script src="assets/js/script.js"></script>
+</html>
