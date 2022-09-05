@@ -21,15 +21,22 @@
         <h1 class="gameText" id="computerText">Computer: </h1>
         <h1 class="gameText" id="resultText">Score: </h1>
 
-        <button class="choiceBnt" id="playerText">ROCK</button>
-        <button class="choiceBnt" id="playerText">PAPER</button>
-        <button class="choiceBnt" id="playerText">SCISSORS</button>
+        <button class="choiceBnt" id="playerText">ROCK</button> <!--rock-->
+        <button class="choiceBnt" id="playerText">PAPER</button> <!--paper-->
+        <button class="choiceBnt" id="playerText">SCISSORS</button> <!--sic-->
     </div>
 
-    <div id="gameScore" class="score-area" class="hide">
-        <p class="scores">Players Score<span id="score">0</span></p>
-        <p class="scores">Computers Score<span id="incorrect">0</span></p>
+    <div id="gameScore" class="score-area hide">
+        <p class="scores" >Players Score<span id="score">0</span></p>
+        <p class="scores" >Computers Score<span id="incorrect">0</span></p>
     </div>
+
+    <div id="end-of-game" class="hide"> 
+        <p id="final-score-text"> <span id="final-score"></span>Final Score</p>
+        <button id="resetGame" class="hide">Click to restart!</button>
+    </div>
+
+    
 </body>
 
 <script src="assets/js/script.js"></script>
