@@ -9,32 +9,37 @@ const resultText = document.getElementById("resultText");
 
 const choiceButtons = document.querySelectorAll(".choiceBnt");
 
-const gameEnd = document.getElementById("hide");
-const gameReset = document.getElementById("resetGame");
+const resetGame = document.getElementById("resetGame");
+
+
 
 let player;
 let computer;
 let result;
 
+
+
 // event listenrs
-startButton.addEventListener("click", enterGame)
-gameRules.addEventListener("click", startgame)
-gameReset.addEventListener("click", endGame)
+startButton.addEventListener("click", enterGame);
+gameRules.addEventListener("click", startgame);
+resetGame.addEventListener("click", gameReset);
+
+
 
 function enterGame() {
-    console.log("enterGame")
     startButton.classList.add("hide")
     gameRules.classList.remove("hide")
     gameScore.classList.add("hide")
+    resetGame.classList.add("hide")
 
 
 }
 
 function startgame() {
-    console.log("startgame")
     gameRules.classList.add("hide")
     gameContainer.classList.remove("hide")
     gameScore.classList.remove("hide")
+    resetGame.classList.remove("hide")
 
    
 }
@@ -54,23 +59,24 @@ choiceButtons.forEach(button => button.addEventListener("click",() => {
 function computerChoice() {
     const randomNumber = Math.floor(Math.random () * 3) +1;
     switch(randomNumber) {
-        case 1:
-            computer = "ROCK";
-            break;
-            case 2:
-                computer = "PAPER";
-                break;
-                case 3:
-                    computer = "SCISSORS";
-                    break;
-
+    case 1:
+        computer = "ROCK";
+    break;
+    case 2:
+        computer = "PAPER";
+    break;
+    case 3:
+        computer = "SCISSORS";
+    break;
     }
-    
 }
 // check answers and to notify player of a draw if the same value is picked by player and computer
 function checkWinner() {
+   
     if ( computer === player) {
-        return  "Its a Draw!"
+        return  "Its a Draw!",
+        gameDraws()
+     
     }
     if (computer === "PAPER" && player === "PAPER") {
         return "Its a Draw!",
@@ -91,16 +97,16 @@ function checkWinner() {
     if (computer === "PAPER" && player === "SCISSORS") {
         return "You Won!",
         playerScore()
+      
         
     }
     if (computer === "PAPER" && player === "ROCK") {
         return "You Lost!",
         computerScore()
         
-
     }
     if ( computer === "SCISSORS" && player === "PAPER") {
-        return "You Lost",
+        return "You Lost", 
         computerScore()
         
     }
@@ -122,21 +128,32 @@ function checkWinner() {
     }
     
 }
-// increment score
+
 function playerScore() {
-    
     let yourScore = parseInt(document.getElementById("score").innerText)
     document.getElementById("score").innerText = ++yourScore;
-
 }
+
 function computerScore() {
-    let yourScore = parseInt(document.getElementById("incorrect").innerText)
+   let yourScore = parseInt(document.getElementById("incorrect").innerText)
     document.getElementById("incorrect").innerText = ++yourScore;
+}
+function gameDraws() {
+    let yourScore = parseInt(document.getElementById("draw").innerText)
+   document.getElementById("draw").innerText = ++yourScore;
+
+ }
+
+function gameReset() { 
+    gameContainer.classList.add("hide")
+    gameScore.classList.add("hide")
+    startButton.classList.remove("hide")
+    resetGame.classList.add("hide")
 
 }
-function endGame() {
-    console.log("endGame")
-    //gameReset.classList.remove('hide')
-    
-}
+
+
+
+
+
 

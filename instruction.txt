@@ -1,0 +1,20 @@
+two player game
+
+user 1 player 
+
+user 2 computer
+
+there are three tools (options), rock , paper and scissors
+
+user 1 needs to display one of the three tools (options)
+
+user 2 displays one of the three tools
+
+compare the two options given  to give a result
+
+then show a result
+
+depending on the result, user 1 or user2 gets a point
+
+if the hightscore is reached the game ends. 
+

@@ -10,32 +10,50 @@
     <title>Rock Paper Scissors </title>
 </head>
 <body>
+    <h1>ROCK PAPER SCISSORS</h1>
 
-    <div id=" controls-area">
+    <div id="controls-area">
     <button id="startBnt" class="start-bnt">Start Game</button>
-    <button id="rules-bnt" class="hide">Game Rules</button>
-    </div>
+    <button id="rules-bnt" class="hide"> Game Rules
+        <ul>
+            <p>Guess which option the computer will pick <br> and try to defend yourself will the options below</p><br>
+            <li>Rock crushes scissors</li><br>
+            <li>scissors cut paper</li><br>
+            <li>and paper covers rock</li><br>
+            <li>You gain a point if you win!</li><br>
+        </ul>
+        <p> Click to Start!</p>
+    </button>
+
+  
 
     <div id="gameArea" class="hide">
-        <h1 class="gameText" id="playerText">Player: </h1>
-        <h1 class="gameText" id="computerText">Computer: </h1>
-        <h1 class="gameText" id="resultText">Score: </h1>
 
-        <button class="choiceBnt" id="playerText">ROCK</button> <!--rock-->
-        <button class="choiceBnt" id="playerText">PAPER</button> <!--paper-->
-        <button class="choiceBnt" id="playerText">SCISSORS</button> <!--sic-->
+      
+        <button class="choiceBnt" id="playerText"><i class="far fa-hand-rock"></i></button> <!--rock-->
+        <button class="choiceBnt" id="playerText"><i class="fas fa-toilet-paper"></i></button> <!--paper-->
+        <button class="choiceBnt" id="playerText"><i class="fa-solid fa-hand-scissors"></i></button> <!--sci-->
+    
+        <h2 class="gameText" id="playerText">Player</h2>
+        <h2 class="gameText" id="computerText"></h2>
+        <h2 class="gameText" id="resultText"></h2>
+
+        
     </div>
 
     <div id="gameScore" class="score-area hide">
         <p class="scores" >Players Score<span id="score">0</span></p>
         <p class="scores" >Computers Score<span id="incorrect">0</span></p>
+        <p class="scores">Game Draws<span id="draw">0</span></p>
     </div>
 
-    <div id="end-of-game" class="hide"> 
-        <p id="final-score-text"> <span id="final-score"></span>Final Score</p>
+    
+
         <button id="resetGame" class="hide">Click to restart!</button>
     </div>
 
+
+</div>
     
 </body>
 

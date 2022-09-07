@@ -1,9 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 *{
     margin: 0;
     padding: 0;
     border: none;
 }
+body {
+    background-color: #021226;
+    font-family: Audiowide, sans-serif;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    text-transform: capitalize;
+}
+h1 {
+    position: absolute;
+    left: 30%;
+    top: 5%;
+    padding-left: 5%;
+    color: #02733E;   
+ 
+}
+h2 {
+    font-size: 20px;
+}
+#controls-area {
+    clear: both;
+    align-items: center;
+    justify-content: center;
+    background-color: #4E458C;
+    display: flex;
+    margin-top: 5%;
+    margin-bottom:10% ;
+    border: solid #412F59;
+    border-radius: 20px;
+    height: 600px;
+    width: 1000px;   
+}
+
+#startBnt {
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 400px;
+    width: 400px;
+    background-color: #A9A7D9;
+    font-family: Audiowide;
+}
+#startBnt:hover {
+    transition: color 0.3s linear;
+    color: #C6D93B;
+}
+#rules-bnt {
+    background-color: inherit;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    height: inherit;
+    font-family: Audiowide;
+}
+#rules-bnt, li {
+    list-style: none;
+    justify-content: center;
+}
+ p:hover {
+    transition: color 0.3s linear;
+    color: #C6D93B;
+}
+
+.choiceBnt{
+    color: #C6D93B;
+    font-size: 5rem;
+    background-color: inherit;
+    display: block;
+}
+#gameScore {
+    clear: both;
+    margin-top: 10%;
+    
+}
+
 
 .hide {
     display: none;
 }
+
