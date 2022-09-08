@@ -76,14 +76,27 @@ h2 {
     color: #C6D93B;
     font-size: 5rem;
     background-color: inherit;
-    display: block;
+    border: solid black;
+   
+    
 }
 #gameScore {
     clear: both;
     margin-top: 10%;
     
 }
-
+#playerText {
+    display: block;
+    
+    
+}
+#resetGame {
+    font-size: 2rem;
+}
+#resetGame:hover {
+    transition: color 0.3s linear;
+    color: #C6D93B;
+}
 
 .hide {
     display: none;

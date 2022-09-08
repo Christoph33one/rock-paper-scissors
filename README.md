@@ -252,8 +252,10 @@ The Rock Paper Scissors game was tested using Lighouse In Google developer tools
 - The Podcast Project was deployed through Gitpod and added to Github. From here you access the live link to the site. 
 https://github.com/
 
-- In github you can select the repository for the project. Next is to go in to setting and then pages. From here you can click the live link to the website. 
+- Within github you can select the repository for the project. After selecting the repository click setting on the left hand side and pick pages within the options. From here you can click the live link to the website at the top of the page. 
 https://www.gitpod.io/
+
+- Add website live link !!!!!!
 
 ![](readme/git%20pod%20repo.png)
 
@@ -270,7 +272,7 @@ https://www.gitpod.io/
 ---
 
 # Credits
-- 
+- The Rock Paper Scissors project was developed using html, css and JavaScript. 
 
 ---
 # Acknowledgments

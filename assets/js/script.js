@@ -46,7 +46,9 @@ function startgame() {
 
 // buttons
 choiceButtons.forEach(button => button.addEventListener("click",() => { 
-    player = button.textContent;
+    player = button.dataset.choice;
+    
+   
     computerChoice();
     playerText.textContent = `player: ${player}`;
     computerText.textContent = `computer: ${computer}`;
@@ -59,41 +61,26 @@ choiceButtons.forEach(button => button.addEventListener("click",() => {
 function computerChoice() {
     const randomNumber = Math.floor(Math.random () * 3) +1;
     switch(randomNumber) {
-    case 1:
-        computer = "ROCK";
-    break;
-    case 2:
-        computer = "PAPER";
-    break;
-    case 3:
-        computer = "SCISSORS";
-    break;
+        case 1:
+            computer = "ROCK";
+            break;
+        case 2:
+            computer = "PAPER";
+            break;
+        case 3:
+            computer = "SCISSORS";
+            break;
     }
 }
 // check answers and to notify player of a draw if the same value is picked by player and computer
 function checkWinner() {
    
     if ( computer === player) {
-        return  "Its a Draw!",
         gameDraws()
+        return  "Its a Draw!"
      
     }
-    if (computer === "PAPER" && player === "PAPER") {
-        return "Its a Draw!",
-        playerScore()
-        
-    }
-    if (computer === "SCISSORS" && player === "SCISSORS") {
-        return "Its a Draw!",
-        playerScore()
-        
-    }
-    if (computer === "ROCK" && player === "ROCk") {
-        return "Its a Draw!",
-        playerScore()
-        
-    }
-   
+    
     if (computer === "PAPER" && player === "SCISSORS") {
         return "You Won!",
         playerScore()
