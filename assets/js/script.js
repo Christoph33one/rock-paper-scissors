@@ -1,3 +1,4 @@
+
 const startButton = document.getElementById("startBnt");
 const gameRules = document.getElementById("rules-bnt");
 const gameContainer = document.getElementById("gameArea");
@@ -14,9 +15,11 @@ let result;
 
 
 // Event listenrs for buttons
+document.addEventListener("DOMContentLoaded",function() {
 startButton.addEventListener("click", enterGame);
 gameRules.addEventListener("click", startgame);
 resetGame.addEventListener("click", gameReset);
+})
 
 function enterGame() {
     startButton.classList.add("hide")
@@ -30,9 +33,7 @@ function startgame() {
     gameScore.classList.remove("hide")
     resetGame.classList.remove("hide")
 }
-/**
- * Choice buttons 
- */
+// Choice buttons
 choiceButtons.forEach(button => button.addEventListener("click",() => { 
     player = button.dataset.choice;
     computerChoice();
@@ -121,12 +122,10 @@ function gameDraws() {
   * Resets all scores
   */
 function gameReset() { 
-
     gameContainer.classList.add("hide")
     gameScore.classList.add("hide")
     startButton.classList.remove("hide")
     resetGame.classList.add("hide") 
-
     resetScore()
 }
 
@@ -134,18 +133,12 @@ function gameReset() {
  * resets all scores to zero.
  */
 function resetScore() {
-    
     document.getElementById("score").innerText = 0;
-
-    
     document.getElementById("incorrect").innerText = 0;
-
-    
-   document.getElementById("draw").innerText = 0;
-
+    document.getElementById("draw").innerText = 0;
 }
 
-    
+
 
 
 
