@@ -2,7 +2,7 @@
 const startButton = document.getElementById("startBnt");
 const gameRules = document.getElementById("rules-bnt");
 const gameContainer = document.getElementById("gameArea");
-const gameScore = document.getElementById("gameScore")
+const gameScore = document.getElementById("gameScore");
 const playerText = document.getElementById("playerText");
 const computerText = document.getElementById("computerText");
 const resultText = document.getElementById("resultText");
@@ -10,8 +10,6 @@ const choiceButtons = document.querySelectorAll(".choiceBnt");
 const resetGame = document.getElementById("resetGame");
 let player;
 let computer;
-let result;
-
 
 
 // Event listenrs for buttons
@@ -19,19 +17,19 @@ document.addEventListener("DOMContentLoaded",function() {
 startButton.addEventListener("click", enterGame);
 gameRules.addEventListener("click", startgame);
 resetGame.addEventListener("click", gameReset);
-})
+});
 
 function enterGame() {
-    startButton.classList.add("hide")
-    gameRules.classList.remove("hide")
-    gameScore.classList.add("hide")
-    resetGame.classList.add("hide")
+    startButton.classList.add("hide");
+    gameRules.classList.remove("hide");
+    gameScore.classList.add("hide");
+    resetGame.classList.add("hide");
 }
 function startgame() {
-    gameRules.classList.add("hide")
-    gameContainer.classList.remove("hide")
-    gameScore.classList.remove("hide")
-    resetGame.classList.remove("hide")
+    gameRules.classList.add("hide");
+    gameContainer.classList.remove("hide");
+    gameScore.classList.remove("hide");
+    resetGame.classList.remove("hide");
 }
 // Choice buttons
 choiceButtons.forEach(button => button.addEventListener("click",() => { 
@@ -66,35 +64,33 @@ function computerChoice() {
  * The score is then incremented and added to the checkWinner function.
 */
 function checkWinner() {
-   
     if ( computer === player) {
-        gameDraws()
-        return  "Its a Draw!"
+        gameDraws();
+        return  "Its a Draw!";
     }
     if (computer === "PAPER" && player === "SCISSORS") {
-        return "You Won!",
-        playerScore() 
+        playerScore();
+        return "You Won!";
     }
     if (computer === "PAPER" && player === "ROCK") {
-        return "You Lost!",
-        computerScore() 
+        computerScore();
+        return "You Lost!";
     }
     if ( computer === "SCISSORS" && player === "PAPER") {
-        return "You Lost", 
-        computerScore()  
+        computerScore();  
+        return "You Lost"; 
     }
     if (computer === "SCISSORS" && player === "ROCK") {
-        return "You Won!",
-        playerScore()
+        playerScore();
+        return "You Won!";
     }
     if (computer === "ROCK" && player === "PAPER") {
-        return"You Won!",
-        playerScore()
-        
+        playerScore();
+        return"You Won!";
     }
     if (computer === "ROCK" && player === "SCISSORS") {
-        return "You Lost!",
-        computerScore()
+        computerScore();
+        return "You Lost!";
     }  
 }
 
@@ -103,30 +99,28 @@ function checkWinner() {
  * If a fucntion is called it increments the score to the checkWinner function.
  */
 function playerScore() {
-    let yourScore = parseInt(document.getElementById("score").innerText)
+    let yourScore = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = ++yourScore;
 }
-
 function computerScore() {
-    let yourScore = parseInt(document.getElementById("incorrect").innerText)
+    let yourScore = parseInt(document.getElementById("incorrect").innerText);
     document.getElementById("incorrect").innerText = ++yourScore;
 }
-
 function gameDraws() {
-    let yourScore = parseInt(document.getElementById("draw").innerText)
-   document.getElementById("draw").innerText = ++yourScore;
+    let yourScore = parseInt(document.getElementById("draw").innerText);
+document.getElementById("draw").innerText = ++yourScore;
 
- }
- /**
-  * Resets the game back to the start button
-  * Resets all scores
-  */
+}
+/**
+ * Resets the game back to the start button
+ * Resets all scores
+ */
 function gameReset() { 
-    gameContainer.classList.add("hide")
-    gameScore.classList.add("hide")
-    startButton.classList.remove("hide")
-    resetGame.classList.add("hide") 
-    resetScore()
+    gameContainer.classList.add("hide");
+    gameScore.classList.add("hide");
+    startButton.classList.remove("hide");
+    resetGame.classList.add("hide"); 
+    resetScore();
 }
 
 /**
@@ -137,13 +131,3 @@ function resetScore() {
     document.getElementById("incorrect").innerText = 0;
     document.getElementById("draw").innerText = 0;
 }
-
-
-
-
-
-
-
-
-
-

@@ -206,8 +206,18 @@ https://color.adobe.com/trends/Game-design
 
 ### Testing
 
-- html valadation / css valadation JS valadation!!
+- html valadation 
+https://validator.w3.org/#validate_by_input
 
+![](readme.images/html%20valadation.png)
+
+- CSS valadation
+
+![](readme.images/css%20valadtion%20.png)
+
+- JavaScript valadation
+
+![](readme.images/js%20valadation.png)
 ___
 
 ### Browser Tests
