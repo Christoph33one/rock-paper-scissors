@@ -116,18 +116,18 @@ margin-top: 5%;
 display: none;
 }
 
-@media (min-width: 500px) and (max-width: 1000px){
+@media screen and (min-width: 500px) and (max-width: 1000px){
 
 h1 {
     font-size: 1.5rem;
     clear: both;
 }
 #rules-bnt {
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .choiceBnt {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 #gameScore{
     font-size: 1rem;
@@ -139,35 +139,41 @@ h1 {
     font-size: 1rem;
 }
 }
-@media (min-width: 300px) and (max-width: 500px) {
+@media screen and (min-width: 300px) and (max-width: 500px) {
 
 h1 {
-    font-size: 0.8rem;
+    font-size: 1rem;
     clear: both;
 }
 #startBnt {
     font-size: 1rem;
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
 }
 #rules-bnt {
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 .choiceBnt {
-    font-size: 0.8rem;
-    display: inline-block;
-    margin: 0;
+    font-size: 3rem;
+    margin: 30px;
+    padding: 5px;
+    display: block;
+    position: relative;
+    margin-left: 50%;
 }
 #gameScore {
     font-size: 0.8rem;
+    position: absolute;
+    margin-left: 50%;
 }
 .gameText {
+    clear: both;
     font-size: 0.8rem;
 }
 #resetGame{
     position: relative;
-    top: 150px;
-    right: 100px;
+    top: 250px;
+    right: 80px;
     font-size: 1rem;
 }
 }
