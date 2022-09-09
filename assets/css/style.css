@@ -6,7 +6,7 @@
 }
 body {
     background-color: #021226;
-    font-family: Audiowide, sans-serif;
+    font-family: Audiowide, sans-serife;
     align-items: center;
     justify-content: center;
     margin: 0;
@@ -58,7 +58,7 @@ h2 {
     background-color: inherit;
     margin: 0 auto;
     padding: 20px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     height: inherit;
     font-family: Audiowide;
@@ -67,7 +67,10 @@ h2 {
     list-style: none;
     justify-content: center;
 }
- p:hover {
+#rules-bnt,h3 {
+    margin:30px;
+}
+ h3:hover {
     transition: color 0.3s linear;
     color: #C6D93B;
 }

@@ -2,62 +2,49 @@ const startButton = document.getElementById("startBnt");
 const gameRules = document.getElementById("rules-bnt");
 const gameContainer = document.getElementById("gameArea");
 const gameScore = document.getElementById("gameScore")
-
 const playerText = document.getElementById("playerText");
 const computerText = document.getElementById("computerText");
 const resultText = document.getElementById("resultText");
-
 const choiceButtons = document.querySelectorAll(".choiceBnt");
-
 const resetGame = document.getElementById("resetGame");
-
-
-
 let player;
 let computer;
 let result;
 
 
 
-// event listenrs
+// Event listenrs for buttons
 startButton.addEventListener("click", enterGame);
 gameRules.addEventListener("click", startgame);
 resetGame.addEventListener("click", gameReset);
-
-
 
 function enterGame() {
     startButton.classList.add("hide")
     gameRules.classList.remove("hide")
     gameScore.classList.add("hide")
     resetGame.classList.add("hide")
-
-
 }
-
 function startgame() {
     gameRules.classList.add("hide")
     gameContainer.classList.remove("hide")
     gameScore.classList.remove("hide")
     resetGame.classList.remove("hide")
-
-   
 }
-
-// buttons
+/**
+ * Choice buttons 
+ */
 choiceButtons.forEach(button => button.addEventListener("click",() => { 
     player = button.dataset.choice;
-    
-   
     computerChoice();
     playerText.textContent = `player: ${player}`;
     computerText.textContent = `computer: ${computer}`;
     resultText.textContent = checkWinner();
-    
-
-
 }));
-// computer choice of answers, Math.random to select a random answer
+
+/*
+* A random case number (1,2,3) and it's value (ROCK,PAPER,SCIRSSORS) will be selected.
+* Once selected, the value will be executed and shown to the user. 
+*/
 function computerChoice() {
     const randomNumber = Math.floor(Math.random () * 3) +1;
     switch(randomNumber) {
@@ -69,39 +56,35 @@ function computerChoice() {
             break;
         case 3:
             computer = "SCISSORS";
-            break;
     }
 }
-// check answers and to notify player of a draw if the same value is picked by player and computer
+
+/**
+ * The checkWinner function gets the selected value from the user or comuter 
+ * and returns if the player has lost of won. 
+ * The score is then incremented and added to the checkWinner function.
+*/
 function checkWinner() {
    
     if ( computer === player) {
         gameDraws()
         return  "Its a Draw!"
-     
     }
-    
     if (computer === "PAPER" && player === "SCISSORS") {
         return "You Won!",
-        playerScore()
-      
-        
+        playerScore() 
     }
     if (computer === "PAPER" && player === "ROCK") {
         return "You Lost!",
-        computerScore()
-        
+        computerScore() 
     }
     if ( computer === "SCISSORS" && player === "PAPER") {
         return "You Lost", 
-        computerScore()
-        
+        computerScore()  
     }
     if (computer === "SCISSORS" && player === "ROCK") {
         return "You Won!",
         playerScore()
-
-        
     }
     if (computer === "ROCK" && player === "PAPER") {
         return"You Won!",
@@ -111,33 +94,60 @@ function checkWinner() {
     if (computer === "ROCK" && player === "SCISSORS") {
         return "You Lost!",
         computerScore()
-        
-    }
-    
+    }  
 }
 
+/**
+ * Increments playerScore, computerScore or gameDraw functions.
+ * If a fucntion is called it increments the score to the checkWinner function.
+ */
 function playerScore() {
     let yourScore = parseInt(document.getElementById("score").innerText)
     document.getElementById("score").innerText = ++yourScore;
 }
 
 function computerScore() {
-   let yourScore = parseInt(document.getElementById("incorrect").innerText)
+    let yourScore = parseInt(document.getElementById("incorrect").innerText)
     document.getElementById("incorrect").innerText = ++yourScore;
 }
+
 function gameDraws() {
     let yourScore = parseInt(document.getElementById("draw").innerText)
    document.getElementById("draw").innerText = ++yourScore;
 
  }
-
+ /**
+  * Resets the game back to the start button
+  * Resets all scores
+  */
 function gameReset() { 
+
     gameContainer.classList.add("hide")
     gameScore.classList.add("hide")
     startButton.classList.remove("hide")
-    resetGame.classList.add("hide")
+    resetGame.classList.add("hide") 
+
+    resetScore()
+}
+
+/**
+ * resets all scores to zero.
+ */
+function resetScore() {
+    
+    document.getElementById("score").innerText = 0;
+
+    
+    document.getElementById("incorrect").innerText = 0;
+
+    
+   document.getElementById("draw").innerText = 0;
 
 }
+
+    
+
+
 
 
 
