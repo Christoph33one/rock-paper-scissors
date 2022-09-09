@@ -11,7 +11,6 @@ const resetGame = document.getElementById("resetGame");
 let player;
 let computer;
 
-
 // Event listenrs for buttons
 document.addEventListener("DOMContentLoaded",function() {
 startButton.addEventListener("click", enterGame);
@@ -19,12 +18,14 @@ gameRules.addEventListener("click", startgame);
 resetGame.addEventListener("click", gameReset);
 });
 
+// start game
 function enterGame() {
     startButton.classList.add("hide");
     gameRules.classList.remove("hide");
     gameScore.classList.add("hide");
     resetGame.classList.add("hide");
 }
+// Begin game after game rules are displayed 
 function startgame() {
     gameRules.classList.add("hide");
     gameContainer.classList.remove("hide");
@@ -124,7 +125,8 @@ function gameReset() {
 }
 
 /**
- * resets all scores to zero.
+ * Resest game scores to zero
+ * when resetScore is called in gameReset function
  */
 function resetScore() {
     document.getElementById("score").innerText = 0;

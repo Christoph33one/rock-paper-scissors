@@ -1,7 +1,8 @@
 # Rock Paper Scissors 
 
-The Rock Paper Scissors game is a platform game to be played on all devices. You will play against the computer and try to beat the computers score. Rock wins against scissors, Scissors wins against paper and Paper wins against rock. Try to guess what the computer will choose and see if you can outsmart the computer by choosing the better option. For each time you win, you gain a point. 
+The Rock Paper Scissors game is a platform game to be played on all devices. You will play against the computer and try to beat the computers score. Rock wins against scissors, Scissors wins against paper and Paper wins against rock. Try to guess what the computer will choose and see if you can outsmart the computer by choosing the better option. For each time you win, you gain a point.
 
+![](readme.images/i%20am%20reposons.png)
 
 # List of Contents
 <li><a href="#home-page">Project Purpose</a></li>
@@ -16,12 +17,10 @@ The Rock Paper Scissors game is a platform game to be played on all devices. You
 # Features 
 <li><a href="#start-game">start Game</a></li>
 <li><a href="#game-area">Main Game Area</a></li>
+<li><a href="#game-instructions">Game instructions </a></li>
 <li><a href="#game-title">Game Title</a></li>
 <li><a href="#buttons-area">Buttons</a></li>
-<li><a href="#footer">Footer</a></li>
-<li><a href="#about">About Us</a></li>
-<li><a href="#listen">Listen</a></li>
-<li><a href="#sign-up">Sign Up</a></li>
+<li><a href="#media-quiries">media Quiries</a></li>
 <li><a href="#future-features">Future Features</a></li>
 
 ---
@@ -80,59 +79,46 @@ The Rock Paper Scissors game is a platform game to be played on all devices. You
 
 ![](readme.images/main%20game%20%20page.png)
 
+---
+
+### Game Instructions
+- The game instructions are displayed after the user clicks in the start button. This is intendedto give an easier way for the user to find the instructions before entering the game. 
+
+- The instructions are layed out in a simple family font to match that of the games tittle. This gives a symmetric feel throughout the game. 
+
+![](readme.images/rules%20page.png)
+
+---
+
 ### Buttons area
 - All buttons are displayed with an icon to give the user a better understanding of what button functions do once clicked.  
 
+- Each button has a curser point set to change once the user hoovers over each button, this to let the user know they are ready to click a button. 
 
+- All buttons have a interactive change of color #C6D93B. This also to give a interaction between the user and ther game.
 
+![](readme.images/button%20interaction.png)
+
+### media quiries
 
 - For mobile screen sizes of a max-width 300px, all button sizes are reduced in size to accommodate a small screen. The main area will change to have the users choice buttons set to a display block formation, this is intended to give a better user feel when playing on a mobile screen size. 
 
-- add image
----
+![](readme.images/mobile%20screen.png)
 
+- For tablet screen sizes from 500px to 1000px, the game structure dose not change from a desktop screen size. The game layout is intended to be user friendly on almost all devices and will only need to be changed when a small screen size is used such as a mobile devise.
 
-### About 
-- The about us page gives the user a brief piece of information on the creators behind the idea - Who are we? It creates a trustworthy feel on management of the website before entering personal details and signing up.
-
-- Styling for the header image is copied from the main homepage to provide a sense of symmetry and keeping the idea that the website is about listening.
-
-- Below the about us section is the address of the company, this is also shared to create trust with the website.
-
-
-![](readme/url7.png)
-
----
-
-### Listen
-- The listen page is where the user will find five podcast samples to try out by just clicking on a link under each explanation of a topic.
-
-- The images (left) will give the user a visual way of knowing what type of topic will be covered. Images are also used to give color to the page.
-
-- A brief piece of text (right) along side each image will explain to the user what this topic covers.
-
-- A link description added above each clickable link will give the user information on what and who they will be listening to before clicking.
-
-- In mobile screen sizes of a max-width 300px, the listen page will have a new layout, this is to be more user friendly when lookin at the images and text.
-![](readme/url%2010.png)
-
----
-
-### Sign Up 
-- The sign up page is the final page to explore, this page gives the user an opportunity to enter personal information and sign up.
-
-- Personal details required - first name, last name, email, user name, password.
-
-- For design and styling, the sign up page uses a background image. It is intended to give the user an idea that this is separate from the other pages but also keeping the theme of the website. The use of a yellow border is to highlight the form more clearly over the bright background image.
-
-- Once the user has entered all information correctly, they will be navigated to a thank you page. This is to give conformation to the user that their personal detials have been sent.
-
-![](readme/url%2011.png)
+![](readme.images/tablet%20size.png)
 
 ---
 
 # Future features 
-- need adding 
+- The future features include.
+
+- A high score system, in which the user will try to beat the comptuer to a high score to win the game.
+
+- A two player system will be added, so two users can player on the same device.
+
+- A sign up page to login to the game and also a website for more interactive.
 
 ---
 
@@ -172,7 +158,9 @@ https://color.adobe.com/trends/Game-design
 -  Game title - #02733E " meduim green" 
 -  Game body - #C6D93B  "Yellow"
 
-- add picture!!
+![](readme.images/color%20wheel.png)
+
+---
 
 # Content
 - The game idea was taken from the original game and uses the same set of rules. All styling and icons are my own style. 
@@ -217,13 +205,13 @@ https://validator.w3.org/#validate_by_input
 - JavaScript valadation
 
 ![](readme.images/js%20valadation.png)
-___
+
+- lightHouse testing
 
 ### Browser Tests
  - Google Chrome
 
  - Safari 
-
 
  ---  
 
@@ -233,7 +221,7 @@ ___
 ### Lighthouse test
 The Rock Paper Scissors game was tested using Lighouse In Google developer tools. All pages were testen on performance, accessibility, best practice and SEO. 
 
-- add images!!!
+![](readme.images/light%20house%20test.png)
 
 
 - Start Button

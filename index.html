@@ -7,6 +7,7 @@
 <script src="https://kit.fontawesome.com/5605f6cfce.js" crossorigin="anonymous"></script>
 <link rel='shortcut icon' type='image/x-icon' href="assets/images/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/css/style.css">
+
 <title>Rock Paper Scissors </title>
 </head>
     <body>
@@ -14,51 +15,55 @@
 
         <!--Controls Area includes start button and gaem rules button-->
             <div id="controls-area">
-            <button id="startBnt" class="start-bnt">Start Game</button>
-            <button id="rules-bnt" class="hide"> Game Instructions
-                <br>
-                <br>
-                The rules are very simple with this Rock-paper-scissors game
-                <br>
-                If you choose Rock, you will win against <br>Scissors but lose against Paper.
-                <br>
-                <br>
-                If you choose Scissors, you will win against<br>Paper but lose against Rock.
-                <br>
-                <br>
-                If you choose Paper, you will win against <br>Rock but lose against Scissors.
-                <br>
-                <br>
-                Continue playing this game or click the restart <br>button to restart the game at any point.
-                <br>
-                <br>
-                Click to Start!
-            </button>
-        
+                <button id="startBnt" class="start-bnt">Start Game</button>
+                <button id="rules-bnt" class="hide"> Game Instructions
+                    <br>
+                    <br>
+                    The rules are very simple with this Rock-paper-scissors game
+                    <br>
+                    If you choose Rock, you will win against <br>Scissors but lose against Paper.
+                    <br>
+                    <br>
+                    If you choose Scissors, you will win against<br>Paper but lose against Rock.
+                    <br>
+                    <br>
+                    If you choose Paper, you will win against <br>Rock but lose against Scissors.
+                    <br>
+                    <br>
+                    Continue playing this game or click the restart <br>button to restart the game at any point.
+                    <br>
+                    <br>
+                    Click to Start!
+                </button>
+            
+                <!--Game area-->
+                <div id="gameArea" class="hide">
+                    <button class="choiceBnt" data-choice="ROCK"><i class="fa-solid fa-hand-back-fist"></i></button>
+                    <button class="choiceBnt" data-choice="PAPER"><i class="fas fa-toilet-paper"></i></button>
+                    <button class="choiceBnt" data-choice="SCISSORS"><i class="fa-solid fa-hand-scissors"></i></button>
+                    
+                    <h2 class="gameText" id="playerText">Player</h2>
+                    <h2 class="gameText" id="computerText">Computer</h2>
+                    <p class="gameText" id="resultText"></p>
+                </div>
 
-            <!--Game area-->
-            <div id="gameArea" class="hide">
-                <button class="choiceBnt" data-choice="ROCK"><i class="fa-solid fa-hand-back-fist"></i></button>
-                <button class="choiceBnt" data-choice="PAPER"><i class="fas fa-toilet-paper"></i></button>
-                <button class="choiceBnt" data-choice="SCISSORS"><i class="fa-solid fa-hand-scissors"></i></button>
-                
-                <h2 class="gameText" id="playerText">Player</h2>
-                <h2 class="gameText" id="computerText">Computer</h2>
-                <p class="gameText" id="resultText"></p>
+            <!-- Game Scoring-->
+                <div id="gameScore" class="score-area hide">
+                    <p class="scores">Players Score<span id="score">0</span></p>
+                    <p class="scores">Computers Score<span id="incorrect">0</span></p>
+                    <p class="scores">Game Draws<span id="draw">0</span></p>
+                </div>
+
+                <!--Reset button-->
+                <div>
+                    <button id="resetGame" class="hide">Click to restart!</button>
+                </div>
             </div>
 
-        <!-- Game Scoring-->
-            <div id="gameScore" class="score-area hide">
-                <p class="scores">Players Score<span id="score">0</span></p>
-                <p class="scores">Computers Score<span id="incorrect">0</span></p>
-                <p class="scores">Game Draws<span id="draw">0</span></p>
+            <!--copyright-->
+            <div id="copyright">
+                <p>created by Chrstopher browning © 2022</p>
             </div>
-
-            <!--Reset button-->
-            <div>
-                <button id="resetGame" class="hide">Click to restart!</button>
-            </div>
-        </div>
         <script src="assets/js/script.js"></script>
     </body>
 </html>
