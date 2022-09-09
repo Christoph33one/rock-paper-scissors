@@ -76,20 +76,19 @@ The Rock Paper Scissors game is a platform game to be played on all devices. You
 
 
 ### Game area
-- The mian game area is where the fun begins. Here the user will be able to use the game fucntions dislayed and interact with the game. The game area is set out to be to easy to read and use. The use of colours and icons will help keep the game interesing and to explain each function with matching icons as to its function. 
+- The main game area is where the fun begins. Here the user will be able to use the game fucntions dislayed and interact with the game. The game area is set out to be to easy to read and use. The use of colours and icons will help keep the game interesing and to explain each function with matching icons as to its function.
 
-- add to add picture of main game area!!
+![](readme.images/main%20game%20%20page.png)
 
 ### Buttons area
-- All buttons are displayed with text to give the user a better understanding of what button functions do once clicked.  
-
----
+- All buttons are displayed with an icon to give the user a better understanding of what button functions do once clicked.  
 
 
-- For mobile screen sizes of a max-width 300px, the images and links are removed. This is to reduce the amount of information displayed on smaller sizes as lots of content can be harder to read on this screen size.
 
-![two images and links](readme/url%204.png)
 
+- For mobile screen sizes of a max-width 300px, all button sizes are reduced in size to accommodate a small screen. The main area will change to have the users choice buttons set to a display block formation, this is intended to give a better user feel when playing on a mobile screen size. 
+
+- add image
 ---
 
 

@@ -63,6 +63,7 @@ background-color: inherit;
 margin: 0 auto;
 padding: 20px;
 font-size: 1.5rem;
+border-radius: 20px;
 cursor: pointer;
 height: inherit;
 font-family: Audiowide;
@@ -127,13 +128,13 @@ h1 {
 }
 
 .choiceBnt {
-    font-size: 2.5rem;
+    font-size: 5rem;
 }
 #gameScore{
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 .gameText {
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 #resetGame {
     font-size: 1rem;
@@ -143,7 +144,8 @@ h1 {
 
 h1 {
     font-size: 1rem;
-    clear: both;
+    margin-right: 20%;
+    padding: 10px;
 }
 #startBnt {
     font-size: 1rem;
@@ -175,5 +177,8 @@ h1 {
     top: 250px;
     right: 80px;
     font-size: 1rem;
+}
+#controls-area {
+    margin-top: 10%;
 }
 }
